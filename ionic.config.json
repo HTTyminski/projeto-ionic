@@ -1,0 +1,8 @@
+{
+  "name": "projetoIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "376684de"
+}

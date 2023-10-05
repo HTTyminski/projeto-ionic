@@ -1,0 +1,406 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+  <div class="flex">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title color="success">1. Dados Gerais</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Pessoa Física</ion-label>
+          <ion-radio value="fisica" [(ngModel)]="fisica"></ion-radio>
+          <ion-label>Pessoa Jurídica</ion-label>
+          <ion-radio value="juridica" [(ngModel)]="juridica"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Nome Produtor"
+            labelPlacement="floating"
+            [(ngModel)]="nomeProdutor"
+            formControlName="nomeProdutor"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="CPF/CNPJ"
+            labelPlacement="floating"
+            [(ngModel)]="cpfCnpjAtendimento"
+            formControlName="cpfCnpjAtendimento"
+          ></ion-input>
+          <ion-input
+            type="text"
+            label="RG"
+            labelPlacement="floating"
+            [(ngModel)]="rg"
+            formControlName="rg"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Inscrição Estadual"
+            labelPlacement="floating"
+            [(ngModel)]="inscricaoEstadual"
+            formControlName="inscricaoEstadual"
+          ></ion-input>
+          <ion-input
+            type="text"
+            label="Nº.Incra"
+            labelPlacement="floating"
+            [(ngModel)]="numeroIncra"
+            formControlName="numeroIncra"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Propriedade Rural:"
+            labelPlacement="floating"
+            [(ngModel)]="propriedadeRuralAtendimento"
+            formControlName="propriedadeRuralAtendimento"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Tipo Logradouro:"
+            labelPlacement="floating"
+            [(ngModel)]="tipoLogradouro"
+            formControlName="tipoLogradouro"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Logradouro:"
+            labelPlacement="floating"
+            [(ngModel)]="logradouro"
+            formControlName="logradouro"
+          ></ion-input>
+          <ion-input
+            type="text"
+            label="Número:"
+            labelPlacement="floating"
+            [(ngModel)]="enderecoNumero"
+            formControlName="enderecoNumero"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Bairro:"
+            labelPlacement="floating"
+            [(ngModel)]="bairro"
+            formControlName="bairro"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Localidade:"
+            labelPlacement="floating"
+            [(ngModel)]="localidade"
+            formControlName="localidade"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Distrito:"
+            labelPlacement="floating"
+            [(ngModel)]="distrito"
+            formControlName="distrito"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Município:"
+            labelPlacement="floating"
+            [(ngModel)]="municipio"
+            formControlName="municipio"
+          ></ion-input>
+          <ion-input
+            type="text"
+            label="CEP:"
+            labelPlacement="floating"
+            [(ngModel)]="cep"
+            formControlName="cep"
+          ></ion-input>
+          <ion-input
+            type="text"
+            label="UF:"
+            labelPlacement="floating"
+            [(ngModel)]="estado"
+            formControlName="estado"
+          ></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="flex">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title color="success"
+          >2. Endereço para Correspondência</ion-card-title
+        >
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Logradouro:"
+            labelPlacement="floating"
+            [(ngModel)]="municipioCorrespondencia"
+          ></ion-input>
+          <ion-input
+            type="text"
+            label="Número:"
+            labelPlacement="floating"
+            [(ngModel)]="numeroCorrespondencia"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Bairro:"
+            labelPlacement="floating"
+          ></ion-input>
+          <ion-input
+            type="text"
+            label="Localidade:"
+            labelPlacement="floating"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Distrito:"
+            labelPlacement="floating"
+          ></ion-input>
+          <ion-input
+            type="text"
+            label="Município:"
+            labelPlacement="floating"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="CEP:"
+            labelPlacement="floating"
+          ></ion-input>
+          <ion-input
+            type="text"
+            label="UF:"
+            labelPlacement="floating"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="text"
+            label="Telefone:"
+            labelPlacement="floating"
+          ></ion-input>
+          <ion-input
+            type="text"
+            label="Caixa Postal:"
+            labelPlacement="floating"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="email"
+            label="Endereço Eletrônico:"
+            labelPlacement="floating"
+          ></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="flex">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title color="success"
+          >3. Atuação do Estabelecimento - Tipos de Agronegócios</ion-card-title
+        >
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-input
+            size="full"
+            type="text"
+            label="Área(ha.):"
+            labelPlacement="floating"
+            [(ngModel)]="area"
+          ></ion-input>
+          <ion-input
+            size="full"
+            type="text"
+            label="Espécie:"
+            labelPlacement="floating"
+            [(ngModel)]="especie"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="string"
+            label="Saldo Total:"
+            labelPlacement="floating"
+            [(ngModel)]="saldoTotal"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="string"
+            label="Exploração Comercial:"
+            labelPlacement="floating"
+            placeholder="Sim/Não"
+            [(ngModel)]="exploracao"
+          ></ion-input>
+        </ion-item>
+        <ion-button color="success" size="full" (click)="saveAtuacao()"
+          >Adicionar</ion-button
+        >
+        <ion-item>
+          <ion-grid>
+            <ion-row *ngFor="let atuacao of atuacoes;let i = index">
+              <ion-col>{{i + 1}}</ion-col>
+              <ion-col>{{atuacao.area}}</ion-col>
+              <ion-col>{{atuacao.especie}}</ion-col>
+              <ion-col>{{atuacao.saldoTotal}}</ion-col>
+              <ion-col>{{atuacao.exploracao}}</ion-col>
+              <ion-col style="color: red" (click)="removeAtuacao(i)">X</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="flex">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title color="success">4.Tipo de Propriedade</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-input
+            size="full"
+            type="text"
+            label="Proprietário:"
+            labelPlacement="floating"
+            [(ngModel)]="proprietario"
+          ></ion-input>
+          <ion-input
+            size="full"
+            type="text"
+            label="Endereço:"
+            labelPlacement="floating"
+            [(ngModel)]="endereco"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="string"
+            label="CPF/CNPJ:"
+            labelPlacement="floating"
+            [(ngModel)]="cpfCnpj"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            type="string"
+            label="Código da Propriedade no SDA:"
+            labelPlacement="floating"
+            placeholder="Sim/Não"
+            [(ngModel)]="codigo"
+          ></ion-input>
+          <ion-input
+            type="string"
+            label="Nº Contrato Arrendamento:"
+            labelPlacement="floating"
+            placeholder="Sim/Não"
+            [(ngModel)]="contrato"
+          ></ion-input>
+        </ion-item>
+        <ion-button color="success" size="full" (click)="savePropriedade()"
+          >Adicionar</ion-button
+        >
+        <ion-item>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Exemplo</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <p>Proprietário: Henrique Tiago Tyminski</p>
+              </ion-item>
+              <ion-item>
+                <p>Endereço: Av.Getúlio Vargas 390,Fósforo-Irati/Pr</p>
+              </ion-item>
+              <ion-item>
+                <p>CPF/CNPJ: 123456789-55</p>
+              </ion-item>
+              <ion-item>
+                <p>Código: 1234567891234</p>
+              </ion-item>
+              <ion-item>
+                <p>Contrato: 1234</p>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+        </ion-item>
+        <ion-item>
+          <ion-card *ngFor="let propriedade of propriedades;let i = index">
+            <ion-card-header>
+              <ion-card-title
+                style="color: red; justify-self: right"
+                (click)="removePropriedade(i)"
+                >X</ion-card-title
+              >
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <p>Proprietário:{{propriedade.proprietario}}</p>
+              </ion-item>
+              <ion-item>
+                <p>Endereço:{{propriedade.endereco}}</p>
+              </ion-item>
+              <ion-item>
+                <p>CPF/CNPJ:{{propriedade.cpfCnpj}}</p>
+              </ion-item>
+              <ion-item>
+                <p>Código:{{propriedade.codigo}}</p>
+              </ion-item>
+              <ion-item>
+                <p>Contrato:{{propriedade.contrato}}</p>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ion-item>
+    <ion-button color="success" size="full" type="submit">Salvar</ion-button>
+  </ion-item>
+</form>
+</ion-content>

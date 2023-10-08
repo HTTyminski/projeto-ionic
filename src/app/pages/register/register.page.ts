@@ -272,8 +272,6 @@ export class RegisterPage implements OnInit {
   cpfCnpj: string;
   codigo: string;
   contrato: string;
-
-  atendimentos: Atendimento[] = [];
   fisica: boolean;
   juridica: boolean;
   cpfCnpjAtendimento: string;
@@ -281,9 +279,6 @@ export class RegisterPage implements OnInit {
   inscricaoEstadual: string;
   numeroIncra: string;
   nomeProdutor: string;
-  telefone: string;
-  email: string;
-  enderecoAtendimento: string;
   propriedadeRuralAtendimento: string;
   tipoLogradouro: string;
   logradouro: string;
@@ -294,60 +289,10 @@ export class RegisterPage implements OnInit {
   municipio: string;
   estado: string;
   cep: string;
-  logradouroCorrespondencia: string;
   numeroCorrespondencia: string;
-  bairroCorrespondencia: string;
-  localidadeCorrespondencia: string;
-  distritoCorrespondencia: string;
   municipioCorrespondencia: string;
-  estadoCorrespondencia: string;
-  cepCorrespondencia: string;
-  telefoneCorrespondencia: string;
-  emailCorrespondencia: string;
-  caixaPostalCorrespondencia: string;
-  atuacao: Atuacao[];
-  propriedade: Propriedade[];
 
   ngOnInit() {}
-
-  saveAtendimento() {
-    let atendimento = new Atendimento();
-    atendimento.fisica = this.fisica;
-    atendimento.juridica = this.juridica;
-    atendimento.cpfCnpjAtendimento = this.cpfCnpjAtendimento;
-    atendimento.rg = this.rg;
-    atendimento.inscricaoEstadual = this.inscricaoEstadual;
-    atendimento.numeroIncra = this.numeroIncra;
-    atendimento.nomeProdutor = this.nomeProdutor;
-    atendimento.telefone = this.telefone;
-    atendimento.email = this.email;
-    atendimento.enderecoAtendimento = this.enderecoAtendimento;
-    atendimento.propriedadeRuralAtendimento = this.propriedadeRuralAtendimento;
-    atendimento.tipoLogradouro = this.tipoLogradouro;
-    atendimento.logradouro = this.logradouro;
-    atendimento.enderecoNumero = this.enderecoNumero;
-    atendimento.bairro = this.bairro;
-    atendimento.localidade = this.localidade;
-    atendimento.distrito = this.distrito;
-    atendimento.municipio = this.municipio;
-    atendimento.estado = this.estado;
-    atendimento.cep = this.cep;
-    atendimento.logradouroCorrespondencia = this.logradouroCorrespondencia;
-    atendimento.numeroCorrespondencia = this.numeroCorrespondencia;
-    atendimento.bairroCorrespondencia = this.bairroCorrespondencia;
-    atendimento.localidadeCorrespondencia = this.localidadeCorrespondencia;
-    atendimento.distritoCorrespondencia = this.distritoCorrespondencia;
-    atendimento.municipioCorrespondencia = this.municipioCorrespondencia;
-    atendimento.estadoCorrespondencia = this.estadoCorrespondencia;
-    atendimento.cepCorrespondencia = this.cepCorrespondencia;
-    atendimento.telefoneCorrespondencia = this.telefoneCorrespondencia;
-    atendimento.emailCorrespondencia = this.emailCorrespondencia;
-    atendimento.caixaPostalCorrespondencia = this.caixaPostalCorrespondencia;
-    atendimento.atuacao = this.atuacao;
-    atendimento.propriedade = this.propriedade;
-    this.atendimentos.push(atendimento);
-    console.log(this.atendimentos);
-  }
 
   savePropriedade() {
     let propriedade = new Propriedade();

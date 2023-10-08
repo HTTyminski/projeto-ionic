@@ -1,19 +1,11 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Registro</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+
+
 
   <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
 
-  <div class="flex">
+  <div class="flex-center">
     <ion-card>
       <ion-card-header>
         <ion-card-title color="success">1. Dados Gerais</ion-card-title>
@@ -33,6 +25,15 @@
             [(ngModel)]="nomeProdutor"
             formControlName="nomeProdutor"
           ></ion-input>
+  
+            <ion-input
+              type="text"
+              label="Propriedade Rural:"
+              labelPlacement="floating"
+              [(ngModel)]="propriedadeRuralAtendimento"
+              formControlName="propriedadeRuralAtendimento"
+            ></ion-input>
+       
         </ion-item>
         <ion-item>
           <ion-input
@@ -66,15 +67,7 @@
             formControlName="numeroIncra"
           ></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-input
-            type="text"
-            label="Propriedade Rural:"
-            labelPlacement="floating"
-            [(ngModel)]="propriedadeRuralAtendimento"
-            formControlName="propriedadeRuralAtendimento"
-          ></ion-input>
-        </ion-item>
+
         <ion-item>
           <ion-input
             type="text"
@@ -403,4 +396,5 @@
     <ion-button color="success" size="full" type="submit">Salvar</ion-button>
   </ion-item>
 </form>
-</ion-content>
+
+

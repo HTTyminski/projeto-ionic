@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Cadastro', url: '/folder/inbox', icon: 'mail' },
+    { title: 'Formulário', url: '/fomulario', icon: 'mail' },
   ];
   // public appPages = [
   //   { title: 'Cadastro', url: '/folder/inbox', icon: 'mail' },
@@ -16,6 +16,6 @@ export class AppComponent {
   //   { title: 'Trash', url: '/folder/trash', icon: 'trash' },
   //   { title: 'Spam', url: '/folder/spam', icon: 'warning' },
   // ];
-  public labels = ['Reminders'];
+  public labels = ['https://henriquetiagotyminski.vercel.app/'];
   constructor() {}
 }

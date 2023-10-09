@@ -7,29 +7,30 @@ import {
   FormControl,
 } from '@angular/forms';
 import { CheckboxCustomEvent } from '@ionic/angular';
+import { Atuacao, Propriedade, Atendimento } from './model';
+
 
 @Component({
   selector: 'app-fomulario',
   templateUrl: './fomulario.page.html',
   styleUrls: ['./fomulario.page.scss'],
 })
-export class FomularioPage implements OnInit {
+export class FomularioPage {
   
-
-
   constructor() { }
-  ngOnInit() {}
+
+  public tempStudentFormData: Atendimento[] = [];
 
   public alertButtons = [
     {
-      text: 'Cancel',
+      text: 'Cancelar',
       role: 'cancel',
       handler: () => {
         console.log('Alert canceled');
       },
     },
     {
-      text: 'OK',
+      text: 'confirmar',
       role: 'confirm',
       handler: () => {
         this.getFormData();
@@ -41,15 +42,9 @@ export class FomularioPage implements OnInit {
     console.log(`Dismissed with role: ${ev.detail.role}`);
   }
 
-
-
   public producerForm: FormGroup = new FormGroup({
     propertyList: new FormArray([this.getPropertyFields()]),
   });
-
-  // isChange(event:any){
-  //   this.terreno = event.detail.value;
-  // }
 
   getPropertyFields(): FormGroup {
     return new FormGroup({
@@ -81,11 +76,9 @@ export class FomularioPage implements OnInit {
       nomeResponsavel: new FormControl('Henrique Tiago Tyminski'),
       cpfResponsavel: new FormControl('04758956844'),
       rgResponsavel: new FormControl('90369857'),
-      //ATUAÇÃO
       atuacoesSubjects: new FormGroup({
         atuacoesSubjectArray: new FormArray([this.newAtuacao()]),
       }),
-      //PROPRIEDADES
       studentSubjects: new FormGroup({
         studentSubjectArray: new FormArray([this.putNewSubject()]),
       }),
@@ -157,30 +150,8 @@ export class FomularioPage implements OnInit {
   }
 
   getFormData() {
-    console.log(this.producerForm.value);
+    this.propertyListArray().push(this.getPropertyFields());
+    this.tempStudentFormData = this.producerForm.value.propertyList;
+    console.log(this.tempStudentFormData);
   }
-  // getFormData() {
-  //   let serverData: any = [],
-  //     tempStudentFormData = JSON.parse(JSON.stringify(this.studentForm.value));
-  //   tempStudentFormData.studentList.forEach((element: any) => {
-  //     let tempObj: any = {
-  //       name: element.student_name,
-  //       class: element.student_class,
-  //       age: element.student_age,
-  //       subject: [],
-  //     };
-  //     element.studentSubjects.studentSubjectArray.forEach(
-  //       (elementSubjectObj: any) => {
-  //         let tempSubObj: any = {
-  //           subject: elementSubjectObj.subject,
-  //           marks: elementSubjectObj.marks,
-  //         };
-  //         tempObj.subject.push(tempSubObj);
-  //       }
-  //     );
-  //     tempObj.subject = JSON.stringify(tempObj.subject);
-  //     serverData.push(tempObj);
-  //   });
-
-  
 }

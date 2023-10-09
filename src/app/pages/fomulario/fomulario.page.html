@@ -1,68 +1,117 @@
-<ion-content [fullscreen]="true">
-  <!-- <ion-segment value="default" [(ngModel)]="tab">
-    <ion-segment-button value="default">
-      <ion-label>1</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="segunda">
-      <ion-label>2</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="terceira">
-      <ion-label>3</ion-label>
-    </ion-segment-button>
-  </ion-segment> -->
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Formulário</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-card class="d-flex justify-content-center">
-    <ion-card-header>
-      <ion-card-title color="success">1. Dados Gerais</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <form [formGroup]="producerForm" (ngSubmit)="getFormData()" class="mt-5 w-50">
-        <div formArrayName="propertyList">
-          <div *ngFor="let item of propertyListArray().controls; let i = index, let t = index">
-            <div [formGroupName]="i">
-              <ion-card-header>
-                <ion-card-title color="success">1. DADOS GERAIS</ion-card-title>
-              </ion-card-header>
+<ion-content [fullscreen]="true" style="padding: '10px'; marging: '10px'">
+  <form [formGroup]="producerForm" (ngSubmit)="getFormData()">
+    <div formArrayName="propertyList">
+      <div
+        *ngFor="let item of propertyListArray().controls; let i = index, let t = index"
+      >
+        <div [formGroupName]="i">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success"
+                >1. IDENTIFICAÇÃO DO PRODUTOR</ion-card-title
+              >
+            </ion-card-header>
+            <ion-card-content>
               <ion-item>
-             
-              </ion-item>
-              <ion-item>
-                <ion-select label="PESSOA FÍSICA OU JURÍDICA:" fill="solid" label-placement="stacked" formControlName="pessoa">
-                  <ion-select-option value="fisica">Pessoa Física</ion-select-option>
-                  <ion-select-option value="juridica">Pessoa Jurídica</ion-select-option>
+                <ion-select
+                  label="PESSOA FÍSICA OU JURÍDICA:"
+                  label-placement="stacked"
+                  formControlName="pessoa"
+                >
+                  <ion-select-option value="fisica"
+                    >Pessoa Física</ion-select-option
+                  >
+                  <ion-select-option value="juridica"
+                    >Pessoa Jurídica</ion-select-option
+                  >
                 </ion-select>
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="LOCALIDADE:" placeholder="ex:123"
-                  formControlName="localidadeProdutor" />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="LOCALIDADE:"
+                  placeholder="ex:123"
+                  formControlName="localidadeProdutor"
+                />
               </ion-item>
               <ion-item>
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="NOME DO PRODUTOR:"
-                  formControlName="nomeProdutor" />
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="CPF/CNPJ:"
-                  formControlName="cpfCnpjProdutor" />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="NOME DO PRODUTOR:"
+                  formControlName="nomeProdutor"
+                />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="CPF/CNPJ:"
+                  formControlName="cpfCnpjProdutor"
+                />
               </ion-item>
               <ion-item>
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="RG:" formControlName="rgProdutor"
-                  />
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="Nº INCRA:"
-                  formControlName="numeroIncra"  />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="RG:"
+                  formControlName="rgProdutor"
+                />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="Nº INCRA:"
+                  formControlName="numeroIncra"
+                />
               </ion-item>
               <ion-item>
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="INSCRIÇÃO ESTADUAL:"
-                  formControlName="InscricaoEstadualProdutor" />
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="PROPRIEDADE RURAL"
-                  formControlName="propriedadeRural"  />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="INSCRIÇÃO ESTADUAL:"
+                  formControlName="InscricaoEstadualProdutor"
+                />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="PROPRIEDADE RURAL"
+                  formControlName="propriedadeRural"
+                />
               </ion-item>
               <ion-item>
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="TIPO LOGRADOURO"
-                  placeholder="ex:Rua" formControlName="tipoLogradouro"  />
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="NÚMERO:" placeholder="ex:123"
-                  formControlName="numeroEndProdutor" />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="TIPO LOGRADOURO"
+                  placeholder="ex:Rua"
+                  formControlName="tipoLogradouro"
+                />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="NÚMERO:"
+                  placeholder="ex:123"
+                  formControlName="numeroEndProdutor"
+                />
               </ion-item>
               <ion-item>
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="BAIRRO:" placeholder="ex:Centro"
-                  formControlName="bairroProdutor"  />
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="DISTRITO:" placeholder="ex:123"
-                  formControlName="distritoProdutor"  />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="BAIRRO:"
+                  placeholder="ex:Centro"
+                  formControlName="bairroProdutor"
+                />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="DISTRITO:"
+                  placeholder="ex:123"
+                  formControlName="distritoProdutor"
+                />
                 <!-- <ion-button
                 type="button"
                 color="success"
@@ -72,150 +121,323 @@
               > -->
               </ion-item>
               <ion-item>
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="CEP:" placeholder="ex:81400-000"
-                  formControlName="cepProdutor"  />
-                <ion-input fill="solid" labelPlacement="stacked" type="text" label="MÚNICIPIO:" placeholder="ex:123"
-                  formControlName="municipioProdutor"  />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="CEP:"
+                  placeholder="ex:81400-000"
+                  formControlName="cepProdutor"
+                />
+                <ion-input
+                  labelPlacement="stacked"
+                  type="text"
+                  label="MÚNICIPIO:"
+                  placeholder="ex:123"
+                  formControlName="municipioProdutor"
+                />
               </ion-item>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success"
+                >2. ENDEREÇO DE CORRESPONDÊNCIA</ion-card-title
+              >
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <ion-input
+                  type="text"
+                  label="Logradouro:"
+                  labelPlacement="floating"
+                  formControlName="logradouroCorrespondencia"
+                ></ion-input>
+                <ion-input
+                  type="text"
+                  label="Número:"
+                  labelPlacement="floating"
+                  formControlName="numeroCorrespondencia"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input
+                  type="text"
+                  label="Bairro:"
+                  labelPlacement="floating"
+                  formControlName="bairroCorrespondencia"
+                ></ion-input>
+                <ion-input
+                  type="text"
+                  label="Localidade:"
+                  labelPlacement="floating"
+                  formControlName="localidadeCorrespondecia"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input
+                  type="text"
+                  label="Distrito:"
+                  labelPlacement="floating"
+                  formControlName="distritoCorrespondencia"
+                ></ion-input>
+                <ion-input
+                  type="text"
+                  label="Município:"
+                  labelPlacement="floating"
+                  formControlName="municipioCorrespondencia"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input
+                  type="text"
+                  label="CEP:"
+                  labelPlacement="floating"
+                  formControlName="cepCorrespondencia"
+                ></ion-input>
+                <ion-input
+                  type="text"
+                  label="UF:"
+                  labelPlacement="floating"
+                  formControlName="ufCorrespondencia"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input
+                  type="text"
+                  label="Telefone:"
+                  labelPlacement="floating"
+                  formControlName="telefoneCorrespondencia"
+                ></ion-input>
+                <ion-input
+                  type="text"
+                  label="Caixa Postal:"
+                  labelPlacement="floating"
+                  formControlName="caixaPostalCorrespondencia"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input
+                  type="email"
+                  label="Endereço Eletrônico:"
+                  labelPlacement="floating"
+                  formControlName="emailCorrespondencia"
+                ></ion-input>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
 
-
-              <ion-card-header>
-                <ion-card-title color="success">2. ENDEREÇO DE CORRESPONDÊNCIA</ion-card-title>
-              </ion-card-header>
-              <ion-item>
-                <ion-input fill="solid" type="text" label="Logradouro:" labelPlacement="floating"
-                  formControlName="logradouroCorrespondencia" ></ion-input>
-                <ion-input fill="solid" type="text" label="Número:" labelPlacement="floating"
-                  formControlName="numeroCorrespondencia" ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-input fill="solid" type="text" label="Bairro:" labelPlacement="floating"
-                  formControlName="bairroCorrespondencia"></ion-input>
-                <ion-input fill="solid" type="text" label="Localidade:" labelPlacement="floating"
-                  formControlName="localidadeCorrespondecia" ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-input fill="solid" type="text" label="Distrito:" labelPlacement="floating"
-                  formControlName="distritoCorrespondencia" ></ion-input>
-                <ion-input fill="solid" type="text" label="Município:" labelPlacement="floating"
-                  formControlName="municipioCorrespondencia" ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-input fill="solid" type="text" label="CEP:" labelPlacement="floating"
-                  formControlName="cepCorrespondencia" ></ion-input>
-                <ion-input fill="solid" type="text" label="UF:" labelPlacement="floating"
-                  formControlName="ufCorrespondencia" ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-input fill="solid" type="text" label="Telefone:" labelPlacement="floating"
-                  formControlName="telefoneCorrespondencia" ></ion-input>
-                <ion-input fill="solid" type="text" label="Caixa Postal:" labelPlacement="floating"
-                  formControlName="caixaPostalCorrespondencia" ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-input fill="solid" type="email" label="Endereço Eletrônico:" labelPlacement="floating"
-                  formControlName="emailCorrespondencia" ></ion-input>
-              </ion-item>
-              <ion-card-header>
-                <ion-card-title color="success">3. ATUAÇÃO DO ESTABELECIMENTO - TIPOS DE AGRONEGÓCIOS</ion-card-title>
-              </ion-card-header>
-              <ion-button color="success" size="full" (click)="addNewAtuacao(t)">Adicionar Atuação</ion-button>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success ion-text-uppercase"
+                >3. Atuação do Estabelecimento – Tipos de
+                Agronegócios</ion-card-title
+              >
+              <ion-grid>
+                <ion-button
+                  color="success"
+                  size="full"
+                  (click)="addNewAtuacao(t)"
+                  >Adicionar Atuação</ion-button
+                >
+              </ion-grid>
+            </ion-card-header>
+            <ion-card-content>
               <div [formGroup]="atuacoesFormGroup(t)">
                 <div formArrayName="atuacoesSubjectArray">
-                  <div *ngFor="let sub of atuacaoArray(t).controls; let g = index;">
-                    <ion-card-subtitle>ATUACÃO: {{g + 1}}</ion-card-subtitle>
+                  <div
+                    *ngFor="let sub of atuacaoArray(t).controls; let g = index;"
+                  >
+                  <div class="claro">
+                    <ion-item slot="start" class="claro">{{g + 1}}</ion-item>
+                  </div>
                     <div [formGroupName]="g">
                       <ion-item>
-                        <ion-input fill="solid" labelPlacement="stacked" type="text" label="ÁREA (HA.):" formControlName="area"  />
-                        <ion-input fill="solid" labelPlacement="stacked" type="text" label="ESPÉCIE ANIMAL (AGRONEGÓCIO):" formControlName="especie" />
+                        <ion-input
+                          labelPlacement="stacked"
+                          type="text"
+                          label="ÁREA (HA.):"
+                          formControlName="area"
+                        />
+                        <ion-input
+                          labelPlacement="stacked"
+                          type="text"
+                          label="ESPÉCIE ANIMAL (AGRONEGÓCIO):"
+                          formControlName="especie"
+                        />
                       </ion-item>
                       <ion-item>
-                        <ion-input fill="solid" labelPlacement="stacked" type="text" label="SALDO TOTAL:" formControlName="saldoTotal" />
-                        <ion-select label="EXPLORAÇÃO COMERCIAL:" fill="solid" label-placement="stacked" formControlName="exploracaoComercial">
+                        <ion-input
+                          labelPlacement="stacked"
+                          type="text"
+                          label="SALDO TOTAL:"
+                          formControlName="saldoTotal"
+                        />
+                        <ion-select
+                          label="EXPLORAÇÃO COMERCIAL:"
+                          label-placement="stacked"
+                          formControlName="exploracaoComercial"
+                        >
                           <ion-select-option value="sim">Sim</ion-select-option>
                           <ion-select-option value="nao">Não</ion-select-option>
                         </ion-select>
                       </ion-item>
                       <ion-item>
-                        <ion-button color="danger" size="full"
-                          (click)="removeNewAtuacao(t, g)">Remover Atuação</ion-button>
+                        <ion-button
+                          fill="clear"
+                          color="danger"
+                          size="full"
+                          (click)="removeNewAtuacao(i, g)"
+                          ><ion-icon name="trash-outline"></ion-icon
+                        ></ion-button>
                       </ion-item>
                     </div>
                   </div>
                 </div>
               </div>
+            </ion-card-content>
+          </ion-card>
 
-              <ion-card-header>
-                <ion-card-title color="success">4. PROPRIEDADES</ion-card-title>
-              </ion-card-header>
-              <ion-button color="success" size="full" (click)="addNewSubject(i)">Adicionar Propriedade</ion-button>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success ion-text-uppercase"
+                >4. Tipo de Propriedade</ion-card-title
+              >
+              <ion-grid>
+                <ion-button
+                  color="success"
+                  size="full"
+                  (click)="addNewSubject(i)"
+                  >Adicionar Propriedade</ion-button
+                >
+              </ion-grid>
+            </ion-card-header>
+            <ion-card-content>
               <div [formGroup]="subjectsFormGroup(i)">
                 <div formArrayName="studentSubjectArray">
-                  <div *ngFor="let studentSub of subjectsArray(i).controls; let j = index;">
-                    <div style="display: flex;">
-                      <ion-card-subtitle>PROPRIEDADE:</ion-card-subtitle>
-                      <ion-badge slot="start">{{j + 1}}</ion-badge>
-                    
+                  <div
+                    *ngFor="let studentSub of subjectsArray(i).controls; let j = index;"
+                  >
+                    <div class="claro">
+                      <ion-item slot="start" class="claro">{{j + 1}}</ion-item>
                     </div>
-                      
                     <div [formGroupName]="j">
                       <ion-item>
-                        <ion-select label="PROPRIEDADE PRÓPRIA OU ARRENDADA:" fill="solid" label-placement="stacked" formControlName="terreno">
-                          <ion-select-option value="propria">Própria</ion-select-option>
-                          <ion-select-option value="arrendada">Arrendada</ion-select-option>
+                        <ion-select
+                          label="PROPRIEDADE PRÓPRIA OU ARRENDADA:"
+                          label-placement="stacked"
+                          formControlName="terreno"
+                        >
+                          <ion-select-option value="propria"
+                            >Própria</ion-select-option
+                          >
+                          <ion-select-option value="arrendada"
+                            >Arrendada</ion-select-option
+                          >
                         </ion-select>
-                        <ion-input fill="solid" labelPlacement="stacked" type="text" label="NOME DO PROPRIETÁRIO:" formControlName="proprietario" />
+                        <ion-input
+                          labelPlacement="stacked"
+                          type="text"
+                          label="NOME DO PROPRIETÁRIO:"
+                          formControlName="proprietario"
+                        />
                       </ion-item>
                       <ion-item>
-                        <ion-input fill="solid" labelPlacement="stacked" type="text" label="CPF/CNPJ:" formControlName="cpfCnpj" />
-                        <ion-input fill="solid" labelPlacement="stacked" type="text" label="NÚMERO DO CONTRATO DE ARRENDAMENTO:" formControlName="contrato" />
+                        <ion-input
+                          labelPlacement="stacked"
+                          type="text"
+                          label="CPF/CNPJ:"
+                          formControlName="cpfCnpj"
+                        />
+                        <ion-input
+                          labelPlacement="stacked"
+                          type="text"
+                          label="NÚMERO DO CONTRATO DE ARRENDAMENTO:"
+                          formControlName="contrato"
+                        />
                       </ion-item>
                       <ion-item>
-                        <ion-input fill="solid" labelPlacement="stacked" type="text" label="ENDEREÇO:" formControlName="endereco" />
-                        <ion-input fill="solid" labelPlacement="stacked" type="text" label="CÓDIGO DA PROPRIEDADE NO SDA:" formControlName="codigo" />
+                        <ion-input
+                          labelPlacement="stacked"
+                          type="text"
+                          label="ENDEREÇO:"
+                          formControlName="endereco"
+                        />
+                        <ion-input
+                          labelPlacement="stacked"
+                          type="text"
+                          label="CÓDIGO DA PROPRIEDADE NO SDA:"
+                          formControlName="codigo"
+                        />
                       </ion-item>
                       <ion-item>
-                        <ion-button color="danger" size="full" (click)="removeNewSubject(i, j)">Remover Propriedade</ion-button>
+                        <ion-button
+                          fill="clear"
+                          color="danger"
+                          size="full"
+                          (click)="removeNewSubject(i, j)"
+                          ><ion-icon name="trash-outline"></ion-icon
+                        ></ion-button>
                       </ion-item>
                     </div>
                   </div>
                 </div>
               </div>
+            </ion-card-content>
+          </ion-card>
 
-              <ion-card-header>
-                <ion-card-title color="success">5. RESPONSABILIDADE PELAS INFORMAÇÕES</ion-card-title>
-              </ion-card-header>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success"
+                >5. RESPONSABILIDADE PELAS INFORMAÇÕES</ion-card-title
+              >
+            </ion-card-header>
+            <ion-card-content>
               <ion-item>
-                <ion-input fill="solid" type="text" label="NOME DO RESPONSÁVEL:" labelPlacement="floating"
-                  formControlName="nomeResponsavel" ></ion-input>
-            
+                <ion-input
+                  type="text"
+                  label="NOME DO RESPONSÁVEL:"
+                  labelPlacement="floating"
+                  formControlName="nomeResponsavel"
+                ></ion-input>
               </ion-item>
               <ion-item>
-                <ion-input fill="solid" type="text" label="CPF:" labelPlacement="floating"
-                formControlName="cpfResponsavel" ></ion-input>
-                <ion-input fill="solid" type="text" label="RG:" labelPlacement="floating"
-                  formControlName="rgResponsavel"></ion-input>
+                <ion-input
+                  type="text"
+                  label="CPF:"
+                  labelPlacement="floating"
+                  formControlName="cpfResponsavel"
+                ></ion-input>
+                <ion-input
+                  type="text"
+                  label="RG:"
+                  labelPlacement="floating"
+                  formControlName="rgResponsavel"
+                ></ion-input>
               </ion-item>
-
-            </div>
-          </div>
+            </ion-card-content>
+          </ion-card>
         </div>
-        <!-- <ion-button color="success" size="full" (click)="addStudent()"
+      </div>
+    </div>
+    <!-- <ion-button color="success" size="full" (click)="addStudent()"
           >Adicionar Propriedade</ion-button
         > -->
-        <ion-button id="present-alert">Finalizar</ion-button>
-        <ion-alert
-          trigger="present-alert"
-          header="Declaro, estando ciente do artigo 299 do código penal brasileiro, que todas as informações prestadas neste
+      
+        <ion-grid>
+          <ion-button
+            color="success"
+            size="full"
+            id="present-alert"
+            >Finalizar</ion-button
+          >
+        </ion-grid>
+    <ion-alert
+      trigger="present-alert"
+      header="Declaro, estando ciente do artigo 299 do código penal brasileiro, que todas as informações prestadas neste
           formulário são verdadeiras e que qualquer alteração nestas informações será comunicada imediatamente ao
           órgão de defesa sanitária animal."
-          [buttons]="alertButtons"
-          (didDismiss)="setResult($event)"
-        ></ion-alert>
-
- 
-      </form>
-    </ion-card-content>
-  </ion-card>
+      [buttons]="alertButtons"
+      (didDismiss)="setResult($event)"
+    ></ion-alert>
+  </form>
 </ion-content>
-

@@ -243,7 +243,7 @@
             </ion-card-header>
             <ion-card-content>
               <div [formGroup]="atuacoesFormGroup(t)">
-                <div formArrayName="atuacoesSubjectArray">
+                <div formArrayName="actingArray">
                   <div
                     *ngFor="let sub of atuacaoArray(t).controls; let g = index;"
                   >
@@ -313,7 +313,7 @@
             </ion-card-header>
             <ion-card-content>
               <div [formGroup]="subjectsFormGroup(i)">
-                <div formArrayName="studentSubjectArray">
+                <div formArrayName="propertyArray">
                   <div
                     *ngFor="let studentSub of subjectsArray(i).controls; let j = index;"
                   >

@@ -76,11 +76,11 @@ export class FomularioPage {
       nomeResponsavel: new FormControl('Henrique Tiago Tyminski'),
       cpfResponsavel: new FormControl('04758956844'),
       rgResponsavel: new FormControl('90369857'),
-      atuacoesSubjects: new FormGroup({
-        atuacoesSubjectArray: new FormArray([this.newAtuacao()]),
+      acting: new FormGroup({
+        actingArray: new FormArray([this.newAtuacao()]),
       }),
-      studentSubjects: new FormGroup({
-        studentSubjectArray: new FormArray([this.putNewSubject()]),
+      property: new FormGroup({
+        propertyArray: new FormArray([this.putNewSubject()]),
       }),
     });
   }
@@ -113,10 +113,10 @@ export class FomularioPage {
     return this.producerForm.get('propertyList') as FormArray;
   }
   atuacoesFormGroup(t: number) {
-    return this.propertyListArray().at(t).get('atuacoesSubjects') as FormGroup;
+    return this.propertyListArray().at(t).get('acting') as FormGroup;
   }
   atuacaoArray(t: number) {
-    return this.atuacoesFormGroup(t).get('atuacoesSubjectArray') as FormArray;
+    return this.atuacoesFormGroup(t).get('actingArray') as FormArray;
   }
   addNewAtuacao(t: number) {
     this.atuacaoArray(t).push(this.putNewSubject());
@@ -133,10 +133,10 @@ export class FomularioPage {
     return this.producerForm.get('propertyList') as FormArray;
   }
   subjectsFormGroup(i: number) {
-    return this.propertyListArray().at(i).get('studentSubjects') as FormGroup;
+    return this.propertyListArray().at(i).get('property') as FormGroup;
   }
   subjectsArray(i: number) {
-    return this.subjectsFormGroup(i).get('studentSubjectArray') as FormArray;
+    return this.subjectsFormGroup(i).get('propertyArray') as FormArray;
   }
   addNewSubject(i: number) {
     this.subjectsArray(i).push(this.putNewSubject());

@@ -49,15 +49,11 @@ de cadastro para que você possa focar no que faz de melhor: produzir no agroneg
 
 ## Dependencies and Script
 
-Este é um projeto de um formulário de cadastro de produtor, desenvolvido utilizando 
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "lint": "ng lint"
-  },
+Este é um projeto de um formulário de cadastro de produtor, desenvolvido utilizando:
+1. "@ionic/angular": "^7.0.0",
+2. "@angular/cli": "^16.0.0",
+3. "typescript": "~5.0.2"
+  
 
 ## Pré-requisitos
 
@@ -74,4 +70,6 @@ Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas em se
 
   
 ![Captura de tela 2023-10-09 083650](https://github.com/HTTyminski/projeto-ionic/assets/50127150/c3a30753-a006-47ef-97df-7c8429252241)
+![Captura de tela 2023-10-09 084811](https://github.com/HTTyminski/projeto-ionic/assets/50127150/55986326-3a28-4a68-ae4d-dc79844a66b9)
+
 

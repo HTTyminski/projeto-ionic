@@ -70,7 +70,7 @@ Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas em se
 ## Instalação
 
 
-   https://github.com/HTTyminski/projeto-ionic.git
+  git clone https://github.com/HTTyminski/projeto-ionic.git
 
   
 ![Captura de tela 2023-10-09 083650](https://github.com/HTTyminski/projeto-ionic/assets/50127150/c3a30753-a006-47ef-97df-7c8429252241)

@@ -1,4 +1,4 @@
-##Formulário de Cadastro para Produtor Rural
+## Formulário de Cadastro para Produtor Rural
 
 
 
@@ -47,7 +47,7 @@ Nosso "Formulário de Cadastro para Produtor Rural" é a ferramenta ideal para a
 de cadastro para que você possa focar no que faz de melhor: produzir no agronegócio.
 
 
-# Dependencies and Script
+## Dependencies and Script
 
 Este é um projeto de um formulário de cadastro de produtor, desenvolvido utilizando 
   "scripts": {
@@ -81,5 +81,10 @@ Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas em se
 1. Clone este repositório em sua máquina local usando o seguinte comando:
 
    ```shell
-   git clone https://github.com/seu-usuario/formulario-cadastro-produtor.git
-cd formulario-cadastro-produtor
+ 
+   abra a pasta c
+   clique com botão direito do mouse e selecione "Abrir com terminal"
+   digite "code .", vai abrir o visual studio code
+  
+   npm install
+   ionic serve

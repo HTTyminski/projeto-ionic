@@ -150,7 +150,7 @@ export class FomularioPage {
   }
 
   getFormData() {
-    this.propertyListArray().push(this.getPropertyFields());
+    // this.propertyListArray().push(this.getPropertyFields());
     this.tempStudentFormData = this.producerForm.value.propertyList;
     console.log(this.tempStudentFormData);
   }

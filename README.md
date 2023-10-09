@@ -1,5 +1,9 @@
 ## Formulário de Cadastro para Produtor Rural
 
+![Captura de tela 2023-10-09 090833](https://github.com/HTTyminski/projeto-ionic/assets/50127150/b122948a-60f2-47ae-acdc-30ae3314dbfb)
+![Captura de tela 2023-10-09 090815](https://github.com/HTTyminski/projeto-ionic/assets/50127150/f041ff87-1af6-4e2f-9c7b-9db4f6e3df25)
+![Captura de tela 2023-10-09 092208](https://github.com/HTTyminski/projeto-ionic/assets/50127150/b540e606-7c49-444f-ba6a-351b7f4d4b91)
+
 
 
 ## Visão Geral

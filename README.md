@@ -58,15 +58,6 @@ Este é um projeto de um formulário de cadastro de produtor, desenvolvido utili
     "test": "ng test",
     "lint": "ng lint"
   },
-    "@angular/forms": "^16.0.0",
-    "@ionic/angular": "^7.0.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
-    "@ionic/angular-toolkit": "^9.0.0",
-    "@types/node": "^12.11.1",
-    "ts-node": "^8.3.0",
-    "typescript": "~5.0.2"
-  },
 
 ## Pré-requisitos
 
@@ -80,8 +71,7 @@ Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas em se
 
 
    https://github.com/HTTyminski/projeto-ionic.git
-   npm install
-   ionic serve
+
   
 ![Captura de tela 2023-10-09 083650](https://github.com/HTTyminski/projeto-ionic/assets/50127150/c3a30753-a006-47ef-97df-7c8429252241)
 

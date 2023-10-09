@@ -1,5 +1,8 @@
-Formulário de Cadastro para Produtor Rural
-Descrição:
+##Formulário de Cadastro para Produtor Rural
+
+
+
+## Visão Geral
 
 O nosso site de "Formulário de Cadastro para Produtor Rural" oferece uma solução abrangente para produtores rurais que desejam realizar um cadastro completo e preciso.Seja você um agricultor, 
 pecuarista ou atuante em qualquer segmento do agronegócio, nosso formulário foi projetado para atender às suas necessidades.
@@ -44,7 +47,7 @@ Nosso "Formulário de Cadastro para Produtor Rural" é a ferramenta ideal para a
 de cadastro para que você possa focar no que faz de melhor: produzir no agronegócio.
 
 
-# Formulário de Cadastro de Produtor
+# Dependencies and Script
 
 Este é um projeto de um formulário de cadastro de produtor, desenvolvido utilizando 
   "scripts": {
@@ -65,19 +68,13 @@ Este é um projeto de um formulário de cadastro de produtor, desenvolvido utili
     "typescript": "~5.0.2"
   },
 
-
-
-## Visão Geral
-
-[Descreva brevemente o propósito e a funcionalidade do seu formulário de cadastro de produtor.]
-
 ## Pré-requisitos
 
 Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
 
 - Node.js e npm
 - Angular CLI
-- [Outras dependências específicas, se houver]
+
 
 ## Instalação
 
